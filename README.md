@@ -32,3 +32,6 @@ django-admin startproject mysite
 cd mysite
 ```
 ※これはvenvを有効化した状態で行ってください。
+
+## 参考文献
+https://docs.djangoproject.com/ja/3.2/intro/tutorial01/
