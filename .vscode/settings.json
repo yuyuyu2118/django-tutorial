@@ -10,6 +10,6 @@
   "editor.fontFamily": "Monaspace Krypton Var",
   "editor.fontWeight": "600",
   "editor.fontLigatures": true,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "git.ignoreLimitWarning": true
 }
