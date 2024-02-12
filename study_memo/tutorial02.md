@@ -90,4 +90,38 @@ Choiceモデルは、questionとchoice_textとvotesという3つのフィール�
     - question: 質問に対する選択肢を格納するフィールドです。
     - choice_text: 選択肢の内容を格納するフィールドです。
     - votes: 選択肢の投票数を格納するフィールドです。
-    
+
+5. INSTALLED_APPSにアプリケーションの設定を加える
+```python
+INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+PollsConfigクラスは、polls/apps.pyにあるので、パスの指定ではpolls.apps.PollsConfigとなる。
+
+6. 再度migrationを行う。
+```pwsh
+py manage.py makemigrations polls
+```
+どのようなSQLが実行されるかの確認
+```pwsh
+py manage.py sqlmigrate polls 0001
+```
+
+makemigrations後に再度migrateを行う
+```pwsh
+py manage.py migrate
+```
+
+これで更新が完了する。
+
+7. shell内でdatabadeの操作を行う。
+以下のコマンドを実行してみる
+
+<!-- TODO:ここから -->
