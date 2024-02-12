@@ -124,4 +124,10 @@ py manage.py migrate
 7. shell内でdatabadeの操作を行う。
 以下のコマンドを実行してみる
 
-<!-- TODO:ここから -->
+```pwsh
+py manage.py shell
+```
+```python
+from polls.models import Question, Choice
+from django.utils import timezone
+q = Question(question_text="What's new?", pub_date=timezone.now())
